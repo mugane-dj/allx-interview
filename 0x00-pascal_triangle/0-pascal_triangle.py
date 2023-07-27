@@ -1,5 +1,16 @@
 #!/usr/bin/python3
+"""
+pascal_triangle
+"""
 def pascal_triangle(n):
+    """
+    The function pascal_triangle generates a Pascal's triangle with n number of rows.
+    
+    :param n: The parameter `n` represents the number of rows in the Pascal's triangle that you want to
+    generate
+    :return: a Pascal's triangle as a list of lists. Each inner list represents a row in the triangle,
+    and each element in the inner list represents a number in that row.
+    """
     triangle = [] #List of lists
     if n > 0:
         #Looping through every row in range 0 -> n
