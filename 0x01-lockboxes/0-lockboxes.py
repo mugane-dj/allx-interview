@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains the function canUnlockAll that checks
+if a list of lockboxes can be unlocked by keys in all lockboxes.
+"""
+
 
 def canUnlockAll(boxes):
     """
