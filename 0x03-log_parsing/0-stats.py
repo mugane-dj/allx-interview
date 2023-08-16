@@ -5,10 +5,9 @@ A script that reads stdin line by line and computes metrics
 import sys
 
 
-total_size = 0
-status_codes = {}
-
 if __name__ == "__main__":
+    total_size = 0
+    status_codes = {}
     try:
         line_count = 0
         while True:
