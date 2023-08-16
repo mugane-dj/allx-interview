@@ -28,7 +28,7 @@ if __name__ == "__main__":
                 print("File size: {}".format(total_size))
                 for status, count in ip_counts.items():
                     if count > 0:
-                        print("{}:{}".format(status, count))
+                        print("{}: {}".format(status, count))
     except KeyboardInterrupt:
         print("File size: {}".format(total_size))
         for status, count in ip_counts.items():
