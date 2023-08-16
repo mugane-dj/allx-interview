@@ -3,6 +3,23 @@
 A script that reads stdin line by line and computes metrics
 """
 import sys
+from typing import Union
+
+
+def print_output(status_codes: dict, file_size: Union[int, bytes]) -> None:
+    """
+    The function "print_output" prints the status codes
+    and their corresponding counts if the count is greater than zero.
+
+    :param status_codes: A dictionary where the keys are status codes
+                         (e.g. 200, 404) and the values  are the number
+                         of occurrences of each status code
+    :param file_size: The file_size parameter is the size of a file in bytes
+    """
+    print("File size: {}".format(file_size))
+    for k, v in sorted(status_codes.items()):
+        if v > 0:
+            print("{}: {}".format(k, v))
 
 
 if __name__ == "__main__":
@@ -30,12 +47,6 @@ if __name__ == "__main__":
                 line_count += 1
 
                 if line_count % 10 == 0:
-                    print("File size: {}".format(file_size))
-                    for k, v in sorted(status_codes.items()):
-                        if v > 0:
-                            print("{}: {}".format(k, v))
+                    print_output(status_codes, total_size)
     finally:
-        print("File size: {}".format(file_size))
-        for k, v in sorted(status_codes.items()):
-            if v > 0:
-                print("{}: {}".format(k, v))
+        print_output(status_codes, total_size)
