@@ -5,8 +5,6 @@ A script that reads stdin line by line and computes metrics
 import sys
 
 
-
-
 total_size = 0
 status_codes = {}
 
