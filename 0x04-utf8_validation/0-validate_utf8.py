@@ -5,24 +5,6 @@ UTF-8 Validation
 from typing import List
 
 
-def check_type(num: int) -> int:
-    """
-    The function `check_type` checks the type of a number by
-    comparing it with a list of valid types and returns the
-    index of the first valid type found, or -1 if no valid
-    type is found.
-
-    :param num: The parameter `num` is an integer
-    :type num: int
-    :return: The function `check_type` returns an integer value.
-    """
-    valid_types = [128, 64, 32, 16, 8]
-    for i in range(5):
-        if (valid_types[i] & num) == 0:
-            return i
-    return -1
-
-
 def validUTF8(data: List[int]) -> bool:
     """
     The function `validUTF8` checks if a given list of integers
@@ -33,18 +15,21 @@ def validUTF8(data: List[int]) -> bool:
     :return: a boolean value. It returns True if the given data
              is a valid UTF-8 encoding, and False otherwise.
     """
-    data_len = len(data)
-    for i in range(data_len):
+    count = 0
+    for i in range(len(data)):
         curr = data[i]
-        type = check_type(curr)
 
-        if type == 0:
-            continue
-        elif type > 1 & i + type <= data_len:
-            while type > 1:
-                if check_type(data[i + type - 1]) != 1:
-                    return False
-                type -= 1
+        if count == 0:
+            if curr >> 5 == 0b110:
+                count = 1
+            elif curr >> 4 == 0b1110:
+                count = 2
+            elif curr >> 3 == 0b11110:
+                count = 3
+            elif curr >> 7 != 0:
+                return False
         else:
-            return False
+            if curr >> 6 != 0b10:
+                return False
+            count -= 1
     return True
