@@ -21,5 +21,5 @@ The bitwise right shift operator can also be used to determine if the integers a
 | int / 128 (2<sup>7</sup>) = 0       |  num >> 7 = 0 |
 | int / 64 (2<sup>6</sup>) = 0b10 | num >> 6 = 0b10 |
 | int / 32 (2<sup>5</sup>) = 0b110 | num >> 5 = 0b110 |
-| int / 16(2<sup>4</sup>) = 0b1110 | num >> 4 = 0b1110 |
+| int / 16 (2<sup>4</sup>) = 0b1110 | num >> 4 = 0b1110 |
 | int / 8 (2<sup>3</sup>) = 0b11110 | num >> 3 = 0b11110 |
