@@ -32,4 +32,4 @@ def validUTF8(data: List[int]) -> bool:
             if curr >> 6 != 0b10:
                 return False
             count -= 1
-    return True
+    return (count == 0)
