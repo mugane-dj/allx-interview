@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-UTF-8 Validation
+UTF-8 Validation by translating the provided data list into a
+sequence of valid UTF-8 encoded characters
 """
 from typing import List
 
