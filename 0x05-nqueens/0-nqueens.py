@@ -7,7 +7,6 @@ import sys
 from typing import List
 
 
-
 def cell_is_safe(board: List[List[int]], row: int, col: int) -> bool:
     """
     The cell_is_safe function checks if a cell within the chessboard
@@ -22,16 +21,17 @@ def cell_is_safe(board: List[List[int]], row: int, col: int) -> bool:
     for i in range(col):
         if board[row][i] == 1:
             return False
-        
+
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
-        
+
     for i, j in zip(range(row, len(board)), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
-        
+
     return True
+
 
 def solve_nqueens(board, col) -> List[List[int]]:
     """
@@ -48,7 +48,7 @@ def solve_nqueens(board, col) -> List[List[int]]:
         if col >= len(board):
             solutions.append([row[:] for row in board])
             return
-        
+
         for i in range(len(board)):
             if cell_is_safe(board, i, col):
                 board[i][col] = 1
@@ -57,7 +57,7 @@ def solve_nqueens(board, col) -> List[List[int]]:
 
     place_queen(col)
     return solutions
-    
+
 
 def main():
     """Entrypoint"""
