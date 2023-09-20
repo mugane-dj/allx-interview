@@ -23,7 +23,7 @@ def makeChange(coins: List[int], total: int) -> int:
                 if coins[i] > j:
                     a[i][j] = 0
                 else:
-                    a[i][j] = 1 + a[i][j - coins[i]]
+                    a[i][j] = a[i][j - coins[i]] + 1
             else:
                 if coins[i] > j:
                     a[i][j] = a[i - 1][j]
