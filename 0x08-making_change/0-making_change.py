@@ -8,7 +8,7 @@ from typing import List
 def makeChange(coins: List[int], total: int) -> int:
     """
     Determines the fewest number of coins needed
-    to meet the given amount `total`
+    to meet the given amount `total` using dynamic programming approach
     """
     if total <= 0:
         return 0
