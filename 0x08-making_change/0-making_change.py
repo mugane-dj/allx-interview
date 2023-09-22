@@ -17,6 +17,10 @@ def makeChange(coins: List[int], total: int) -> int:
     if m == 0:
         return -1
 
+    for coin in coins:
+        if total < coin:
+            return -1
+
     # create solution matrix
     a = [[0 for _ in range(total + 1)] for _ in range(m)]
 
