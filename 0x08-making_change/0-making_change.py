@@ -15,15 +15,14 @@ def makeChange(coins: List[int], total: int) -> int:
     if m == 0:
         return -1
 
-    if total <= 0:
-        return 0
-
     # create solution matrix
     a = [[0 for _ in range(total + 1)] for _ in range(m)]
 
     for i in range(m):
         for j in range(total + 1):
             if i == 0 and j == 0:
+                a[i][j] = 0
+            elif j == 0:
                 a[i][j] = 0
             elif i == 0:
                 if coins[i] > j:
