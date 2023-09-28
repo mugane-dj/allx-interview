@@ -4,7 +4,7 @@ Island perimeter module
 """
 
 
-def island_perimeter(grid: list[list[int]]) -> int:
+def island_perimeter(grid):
     """
     Calculate the perimeter of a 2D matrix
 
