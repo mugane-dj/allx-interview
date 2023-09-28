@@ -26,11 +26,12 @@ def minOperations(n: int) -> int:
     while (n > 1):
         if (len(char_string) % 2):
             char_string *= 2
+            copy_all += 1
+            paste += 1
             n //= 2
         else:
             char_string += "H"
+            paste += 1
             n -= 1
-
-        copy_all += 1
-        paste += 1
+            
     return copy_all + paste
