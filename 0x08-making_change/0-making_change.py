@@ -9,7 +9,7 @@ def makeChange(coins: List[int], total: int) -> int:
     """
     Determines the fewest number of coins needed
     to meet the given amount `total` using dynamic programming approach
-    :pram coins: list of the denominations of coins available
+    :param coins: list of the denominations of coins available
     :param total: the amount to be made
     :return: fewest number of coins needed to meet `total`
              -1 if `total` cannot be met by any number of coins
