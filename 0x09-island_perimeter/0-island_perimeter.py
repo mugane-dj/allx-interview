@@ -10,7 +10,7 @@ def island_perimeter(grid: List[List[int]]) -> int:
     Calculate the perimeter of a 2D matrix
 
     :param: grid - 2D matrix to calculate perimeter
-    :return: perimeter of island
+    :return: perimeter of island (2D matrix)
     """
     n = len(grid)
     m = len(grid[0])
