@@ -25,13 +25,13 @@ def isWinner(x, nums):
         n = nums[i]
         set = list(range(1, n + 1))
         primes = list(filter(isPrime, set))
+        if len(primes) == 0:
+            return None
 
         for prime in primes:
             set = [num for num in set if num % prime != 0]
 
-        if len(set) == 0:
-            return None
-        elif len(set) % 2 == 0:
+        if len(set) % 2 == 0:
             return "Maria"
         else:
             return "Ben"
