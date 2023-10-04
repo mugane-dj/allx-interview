@@ -6,7 +6,8 @@ Prime Game module
 
 def isWinner(x, nums):
     """
-    isWinner - determines the winner of the game if both players play optimally.
+    isWinner - determines the winner of the game if both players play
+               optimally.
     :param: x - number of rounds to be played.
     :param: nums - an array of n (number picked in each round to form the set)
     """
