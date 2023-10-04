@@ -28,9 +28,9 @@ def isWinner(x, nums):
         for prime in primes:
             set = [num for num in set if num % prime != 0]
 
-        if len(set) == 0:
-            return None
-        elif len(set) % 2 == 0:
+        if len(set) % 2 == 0:
             return "Maria"
-        else:
+        elif len(set) > 0:
             return "Ben"
+
+    return None
