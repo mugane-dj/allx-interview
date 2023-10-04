@@ -30,7 +30,7 @@ def isWinner(x, nums):
 
         if len(set) % 2 == 0:
             return "Maria"
-        elif len(set) > 0:
+        else:
             return "Ben"
 
     return None
