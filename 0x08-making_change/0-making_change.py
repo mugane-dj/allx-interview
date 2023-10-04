@@ -14,6 +14,8 @@ def makeChange(coins: List[int], total: int) -> int:
     :return: fewest number of coins needed to meet `total`
              -1 if `total` cannot be met by any number of coins
     """
+    if total <= 0:
+        return 0
     result = []
     coins.sort(reverse=True)
     for coin in coins:
